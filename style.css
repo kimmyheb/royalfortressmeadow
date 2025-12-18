@@ -1,1 +1,11 @@
 
+:root {
+  --bg-dark: #0b0f0d;
+  --bg-light: #f6f6f4;
+  --text-dark: #111;
+  --text-muted: #555;
+  --accent: #1f6f4a;
+  --border-light: #ddd;
+}
+
+/* rest of your CSS */
