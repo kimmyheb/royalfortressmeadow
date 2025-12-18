@@ -46,6 +46,42 @@ header {
 }
 
 /* =========================
+   HEADER + NAVIGATION
+========================= */
+.site-header {
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-light);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 0.6px;
+  color: var(--text-dark);
+}
+
+nav a {
+  margin-left: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================
    MAIN LAYOUT
 ========================= */
 main {
@@ -72,30 +108,32 @@ section:not(#hero)::before {
    TYPOGRAPHY
 ========================= */
 h1 {
-  font-size: 52px;
+  font-size: 50px;
   font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 24px;
+  line-height: 1.25;
+  margin-bottom: 28px;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 400;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
   color: var(--accent);
 }
 
 h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 p {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 1.65;
   color: var(--text-muted);
-  max-width: 720px;
+  max-width: 680px;
 }
+
 
 /* =========================
    LINKS
@@ -113,51 +151,46 @@ a:hover {
    HERO
 ========================= */
 #hero {
-  max-width: 900px;
-  margin-bottom: 140px;
-  border-left: 4px solid var(--accent);
+  max-width: 820px;
+  margin-bottom: 120px;
+  border-left: 3px solid var(--accent);
   padding-left: 32px;
 }
 
 #hero p {
-  font-size: 21px;
-  margin-top: 24px;
+  font-size: 19px;
+  margin-top: 20px;
 }
 
+
 /* =========================
-   BUTTONS
+   BUTTONS (CALM DEFAULT)
 ========================= */
 .cta-buttons {
   margin-top: 40px;
 }
 
 .cta-buttons a {
-  padding: 14px 28px;
+  padding: 12px 26px;
   margin-right: 16px;
   border-radius: 4px;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   display: inline-block;
+  border: 1px solid var(--border-light);
+  color: var(--text-dark);
+  background: transparent;
+  transition: all 0.2s ease;
 }
 
-.primary-btn {
+/* color only on interaction */
+.cta-buttons a:hover,
+.cta-buttons a:focus {
   background: var(--accent);
-  color: white;
+  color: #ffffff;
+  border-color: var(--accent);
 }
 
-.primary-btn:hover {
-  background: #263f32;
-}
-
-.secondary-btn {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.secondary-btn:hover {
-  background: var(--accent);
-  color: white;
-}
 
 /* =========================
    PACKAGES
@@ -201,7 +234,8 @@ ol {
 }
 
 ol li {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  line-height: 720px;
 }
 
 /* =========================
