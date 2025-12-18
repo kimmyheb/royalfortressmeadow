@@ -5,7 +5,7 @@
   --bg-light: #f5f4f2;
   --text-dark: #2b2b2b;
   --text-muted: #6a6a6a;
-  --accent: #2f4f3e;
+  --accent: #2f4f3e; /* deep olive */
   --border-light: #e0deda;
 }
 
@@ -48,12 +48,14 @@ section {
   margin-bottom: 120px;
 }
 
+/* subtle editorial divider */
 section:not(#hero)::before {
   content: "";
   display: block;
   width: 60px;
   height: 1px;
-  background: var(--border-light);
+  background: var(--accent);
+  opacity: 0.35;
   margin-bottom: 48px;
 }
 
@@ -71,6 +73,7 @@ h2 {
   font-size: 32px;
   font-weight: 400;
   margin-bottom: 48px;
+  color: var(--accent); /* intentional color anchor */
 }
 
 h3 {
@@ -86,11 +89,25 @@ p {
 }
 
 /* =========================
+   LINKS
+========================= */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* =========================
    HERO
 ========================= */
 #hero {
   max-width: 900px;
   margin-bottom: 140px;
+  border-left: 4px solid var(--accent);
+  padding-left: 32px;
 }
 
 #hero p {
@@ -106,7 +123,6 @@ p {
 }
 
 .cta-buttons a {
-  text-decoration: none;
   padding: 14px 28px;
   margin-right: 16px;
   border-radius: 4px;
@@ -204,6 +220,12 @@ textarea {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
 button {
   padding: 12px 24px;
   font-size: 16px;
@@ -229,4 +251,3 @@ footer {
   border-top: 1px solid var(--border-light);
   font-family: Helvetica, Arial, sans-serif;
 }
-
