@@ -211,23 +211,22 @@ a:hover {
 }
 
 /* =========================
-   PROCESS
-========================= */
-/* =========================
-   PROCESS
+   PROCESS (HARD RESET)
 ========================= */
 ol {
-  margin: 0;               /* ← THIS IS THE KEY */
-  padding-left: 22px;
+  margin: 0;                 /* kills browser spacing */
+  padding-left: 20px;        /* controlled indentation */
   font-family: Helvetica, Arial, sans-serif;
   color: var(--text-muted);
   max-width: 720px;
+  line-height: 1.4;          /* applies uniformly */
 }
 
 ol li {
-  margin-bottom: 8px;
-  line-height: 1.4;
+  margin: 0 0 6px 0;         /* tight vertical rhythm */
+  padding: 0;
 }
+
 
 
 
