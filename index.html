@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Royal Fortress Meadow | Strategic Websites & Consulting</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,11 +25,11 @@
 
     <div class="cta-buttons">
       <a href="packages.html">View Website Packages</a>
-      <a href="mailto:youremail@domain.com">Request a Strategy Call</a>
+      <a href="#contact">Request a Strategy Call</a>
     </div>
   </section>
 
-  <!-- HOW IT WORKS + ACTION -->
+  <!-- HOW IT WORKS -->
   <section>
     <h2>How It Works</h2>
 
@@ -40,11 +39,22 @@
       <li><strong>Build</strong> – Clean, responsive execution.</li>
       <li><strong>Launch</strong> – Confident handoff and next steps.</li>
     </ol>
+  </section>
 
-    <div class="cta-buttons" style="margin-top: 48px;">
-      <a href="packages.html">View Website Packages</a>
-      <a href="mailto:youremail@domain.com">Request a Strategy Call</a>
-    </div>
+  <!-- CONTACT / MESSAGE BOX -->
+  <section id="contact">
+    <h2>Start the Conversation</h2>
+
+    <p>
+      Interested in working together? Share a few details and I’ll follow up.
+    </p>
+
+    <form action="mailto:youremail@domain.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Tell me about your business and goals" rows="5"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
 </main>
