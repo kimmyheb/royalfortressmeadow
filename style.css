@@ -29,6 +29,9 @@ body {
 /* =========================
    HEADER
 ========================= */
+/* =========================
+   HEADER
+========================= */
 header {
   padding: 28px 40px;
   font-size: 16px;
@@ -36,6 +39,7 @@ header {
   border-bottom: 1px solid var(--border-light);
   font-family: Helvetica, Arial, sans-serif;
 }
+
 
 /* =========================
    HEADER + NAVIGATION
@@ -209,7 +213,11 @@ a:hover {
 /* =========================
    PROCESS
 ========================= */
+/* =========================
+   PROCESS
+========================= */
 ol {
+  margin: 0;               /* ← THIS IS THE KEY */
   padding-left: 22px;
   font-family: Helvetica, Arial, sans-serif;
   color: var(--text-muted);
@@ -217,9 +225,10 @@ ol {
 }
 
 ol li {
-  margin-bottom: 10px;
-  line-height: 1;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
+
 
 
 /* =========================
