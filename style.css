@@ -1,3 +1,13 @@
+:root {
+  --bg-light: #f5f4f2;
+  --text-dark: #2b2b2b;
+  --text-muted: #6a6a6a;
+  --accent: #2f4f3e;
+  --border-light: #e0deda;
+}
+
+
+
 /* =========================
    COLOR SYSTEM (REQUIRED)
 ========================= */
