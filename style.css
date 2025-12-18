@@ -27,6 +27,16 @@ body {
 /* =========================
    HEADER + NAVIGATION
 ========================= */
+.brand::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 6px;
+}
+
+
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid var(--border-light);
@@ -70,6 +80,11 @@ nav a:hover {
   color: var(--accent);
   border-bottom: 1px solid var(--accent);
 }
+
+nav a {
+  opacity: 0.85;
+}
+
 
 /* =========================
    MAIN LAYOUT
@@ -140,6 +155,13 @@ p {
   margin-top: 20px;
 }
 
+#hero {
+  background: #ffffff;
+  padding: 56px 48px;
+  border-left: 4px solid var(--accent);
+}
+
+
 /* accent underline for hero headline */
 #hero h1::after {
   content: "";
@@ -176,6 +198,12 @@ p {
   color: #ffffff;
   border-color: var(--accent);
 }
+
+.cta-buttons a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
 
 /* =========================
    PACKAGES
@@ -223,6 +251,24 @@ ol {
 ol li {
   margin-bottom: 8px;
 }
+
+ol li strong {
+  color: var(--text-dark);
+}
+
+ol {
+  counter-reset: step;
+}
+
+ol li {
+  counter-increment: step;
+}
+
+ol li::marker {
+  color: var(--accent);
+  font-weight: 500;
+}
+
 
 /* =========================
    CONTACT
