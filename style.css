@@ -1,7 +1,5 @@
-
-
 /* =========================
-   COLOR SYSTEM (REQUIRED)
+   COLOR SYSTEM
 ========================= */
 :root {
   --bg-light: #f5f4f2;
@@ -27,26 +25,33 @@ body {
 }
 
 /* =========================
-   HEADER
-========================= */
-/* =========================
-   HEADER
-========================= */
-header {
-  padding: 28px 40px;
-  font-size: 16px;
-  letter-spacing: 0.4px;
-  border-bottom: 1px solid var(--border-light);
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-
-/* =========================
    HEADER + NAVIGATION
 ========================= */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
 nav {
   display: flex;
   align-items: center;
+  margin-left: auto; /* pushes nav to the right */
 }
 
 nav a {
@@ -66,8 +71,6 @@ nav a:hover {
   border-bottom: 1px solid var(--accent);
 }
 
-
-
 /* =========================
    MAIN LAYOUT
 ========================= */
@@ -84,11 +87,11 @@ section {
 section:not(#hero)::before {
   content: "";
   display: block;
-  width: 60px;
+  width: 48px;
   height: 1px;
   background: var(--accent);
-  opacity: 0.35;
-  margin-bottom: 48px;
+  opacity: 0.25;
+  margin-bottom: 40px;
 }
 
 /* =========================
@@ -104,8 +107,9 @@ h1 {
 h2 {
   font-size: 30px;
   font-weight: 400;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   color: var(--accent);
+  letter-spacing: 0.4px;
 }
 
 h3 {
@@ -119,19 +123,6 @@ p {
   line-height: 1.65;
   color: var(--text-muted);
   max-width: 680px;
-}
-
-
-/* =========================
-   LINKS
-========================= */
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.85;
 }
 
 /* =========================
@@ -149,9 +140,18 @@ a:hover {
   margin-top: 20px;
 }
 
+/* accent underline for hero headline */
+#hero h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 20px;
+}
 
 /* =========================
-   BUTTONS (CALM DEFAULT)
+   BUTTONS (UNIFIED)
 ========================= */
 .cta-buttons {
   margin-top: 40px;
@@ -170,14 +170,12 @@ a:hover {
   transition: all 0.2s ease;
 }
 
-/* color only on interaction */
 .cta-buttons a:hover,
 .cta-buttons a:focus {
   background: var(--accent);
   color: #ffffff;
   border-color: var(--accent);
 }
-
 
 /* =========================
    PACKAGES
@@ -189,7 +187,7 @@ a:hover {
 }
 
 .package {
-  background: white;
+  background: #ffffff;
   border: 1px solid var(--border-light);
   padding: 36px;
 }
@@ -211,24 +209,20 @@ a:hover {
 }
 
 /* =========================
-   PROCESS (HARD RESET)
+   PROCESS (TIGHT & CLEAN)
 ========================= */
 ol {
-  margin: 0;                 /* kills browser spacing */
-  padding-left: 20px;        /* controlled indentation */
+  margin: 0;
+  padding-left: 20px;
   font-family: Helvetica, Arial, sans-serif;
   color: var(--text-muted);
   max-width: 720px;
-  line-height: 1.4;          /* applies uniformly */
+  line-height: 1.4;
 }
 
 ol li {
-  margin: 0 0 6px 0;         /* tight vertical rhythm */
-  padding: 0;
+  margin-bottom: 8px;
 }
-
-
-
 
 /* =========================
    CONTACT
@@ -244,6 +238,7 @@ textarea {
   margin-bottom: 16px;
   font-size: 16px;
   border: 1px solid var(--border-light);
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 input:focus,
@@ -258,6 +253,7 @@ button {
   background: var(--accent);
   color: white;
   border: none;
+  border-radius: 4px;
 }
 
 button:hover {
@@ -274,16 +270,4 @@ footer {
   color: var(--text-muted);
   border-top: 1px solid var(--border-light);
   font-family: Helvetica, Arial, sans-serif;
-}
-
-
-
-
-
-.brand {
-  font-family: Georgia, serif;
-  font-size: 26px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: var(--text-dark);
 }
