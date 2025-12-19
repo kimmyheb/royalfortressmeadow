@@ -301,3 +301,7 @@ footer {
   font-weight: 600;
   font-family: Helvetica, Arial, sans-serif;
 }
+
+body {
+  background: pink !important;
+}
