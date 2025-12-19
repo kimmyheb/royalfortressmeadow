@@ -85,47 +85,51 @@ section {
 }
 
 /* =========================
-   HERO
+   HERO (REFINED)
 ========================= */
 #hero {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 860px;
+  margin: 0 auto 160px auto;
+  padding: 96px 72px;
   background: var(--panel-bg);
-  padding: 88px 72px;
-  border-left: 5px solid var(--accent);
+  border-left: 4px solid var(--accent);
 }
 
 #hero h1 {
-  font-size: 56px;
-  line-height: 1.2;
+  font-size: 60px;
+  line-height: 1.15;
   font-weight: 500;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 #hero h1::after {
   content: "";
   display: block;
-  width: 56px;
-  height: 4px;
+  width: 72px;
+  height: 2px;
   background: var(--accent);
-  margin-top: 24px;
+  margin-top: 32px;
+  opacity: 0.9;
 }
+
 
 #hero p {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: var(--text-muted);
-  max-width: 640px;
+  max-width: 620px;
 }
+
 
 /* =========================
    CTA BUTTONS
 ========================= */
 .cta-buttons {
-  margin-top: 48px;
+  margin-top: 64px;
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
+
 
 .cta-buttons a {
   padding: 14px 30px;
@@ -147,16 +151,19 @@ section {
 }
 
 /* =========================
-   SECTION HEADINGS
+   SECTION HEADINGS (STRONG)
 ========================= */
 section h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 40px;
+  margin-bottom: 64px;
+  text-align: center;
 }
+
+
 
 /* =========================
    HOW IT WORKS
@@ -177,6 +184,29 @@ ol li {
 
 ol li strong {
   color: var(--text-dark);
+}
+.process {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.process li {
+  margin-bottom: 32px;
+  padding-left: 44px;
+  position: relative;
+}
+
+.process li::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
 }
 
 /* =========================
@@ -229,6 +259,44 @@ button:hover {
   background: #263f32;
 }
 
+
+.process ol {
+  counter-reset: step;
+}
+
+
+/* =========================
+   PROCESS (ELEVATED)
+========================= */
+.process {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.process ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.process li {
+  margin-bottom: 28px;
+  padding-left: 36px;
+  position: relative;
+}
+
+.process li::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+
 /* =========================
    FOOTER
 ========================= */
@@ -239,4 +307,46 @@ footer {
   color: var(--text-muted);
   border-top: 1px solid var(--border-light);
   font-family: Helvetica, Arial, sans-serif;
+}
+
+/* =========================
+   PACKAGES PAGE
+========================= */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+  margin-top: 80px;
+}
+
+.package {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 48px 40px;
+}
+
+.package.highlight {
+  border: 2px solid var(--accent);
+}
+
+.package h3 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.package ul {
+  padding-left: 18px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--text-muted);
+}
+
+.price {
+  margin-top: 28px;
+  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+}
+main > section > h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
