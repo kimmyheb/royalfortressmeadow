@@ -57,6 +57,10 @@ body {
   font-weight: 600;
 }
 
+.brand {
+  text-rendering: optimizeLegibility;
+}
+
 
 nav {
   display: flex;
@@ -185,7 +189,7 @@ section h2 {
   color: var(--text-muted);
 }
 
-.process li::before {
+.process li:{
   counter-increment: step;
   content: counter(step);
   position: absolute;
@@ -197,7 +201,7 @@ section h2 {
   white-space: normal;
 }
 
-.process li strong {
+.process li strong + *{
   display: inline !important;        /* prevents block stacking */
   color: var(--text-dark);
   font-weight: 700;
