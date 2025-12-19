@@ -50,6 +50,7 @@ body {
   text-transform: uppercase;    /* editorial authority */
   color: var(--text-dark);
   line-height: 1;
+  padding-top: 2px;
 }
 .brand span {
   color: var(--accent);
@@ -76,6 +77,7 @@ nav a {
 nav a:hover {
   color: var(--accent);
   border-bottom-color: var(--accent);
+  opacity: 0.9;
 }
 
 /* =========================
@@ -192,6 +194,7 @@ section h2 {
   font-size: 14px;
   font-weight: 700;
   color: var(--accent);
+  white-space: normal;
 }
 
 .process li strong {
@@ -275,16 +278,18 @@ footer {
 }
 
 .package {
+  position: relative;
+  overflow: hidden;
   background: #ffffff;
   border: 1px solid var(--border-light);
   padding: 48px 40px;
-  transition: 
   transition:
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     background-color 0.25s ease,
     border-color 0.25s ease;
 }
+
 
 .package:hover {
   background-color: rgba(47, 79, 62, 0.04); /* subtle accent wash */
