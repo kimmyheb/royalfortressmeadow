@@ -36,18 +36,26 @@ body {
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 28px 24px;
+  padding: 36px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .brand {
-  font-size: 52px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: 28px;              /* smaller = more confident */
+  font-weight: 500;
+  letter-spacing: 0.12em;       /* THIS is the luxury move */
+  text-transform: uppercase;    /* editorial authority */
+  color: var(--text-dark);
+  line-height: 1;
 }
+.brand span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 
 nav {
   display: flex;
@@ -56,8 +64,8 @@ nav {
 
 nav a {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-muted);
   padding-bottom: 6px;
