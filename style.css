@@ -43,7 +43,7 @@ body {
 }
 
 .brand {
-  font-size: 32px;
+  font-size: 52px;
   font-weight: 600;
   letter-spacing: 0.8px;
   color: var(--accent);
@@ -95,7 +95,7 @@ section {
 }
 
 #hero h1 {
-  font-size: 60px;
+  font-size: 48px;
   line-height: 1.15;
   font-weight: 500;
   margin-bottom: 32px;
@@ -140,7 +140,7 @@ section {
    SECTION HEADINGS
 ========================= */
 section h2 {
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -270,7 +270,9 @@ footer {
 ========================= */
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, mgit add .
+  git commit -m "cache test"
+  git push origin maininmax(280px, 1fr));
   gap: 48px;
   margin-top: 80px;
 }
