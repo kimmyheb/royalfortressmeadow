@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Royal Fortress Meadow | Strategic Websites & Consulting</title>
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("cYkQuVIJbBONQwBfX");
+  })();
+</script>
+
 </head>
 
 <body>
@@ -50,12 +58,16 @@
     <h2>Start the Conversation</h2>
     <p>Interested in working together? Share a few details and I’ll follow up.</p>
 
-    <form action="mailto:txnbs@icloud.com" method="post" enctype="text/plain">
+    <form id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Tell me about your business and goals" rows="5"></textarea>
+      <textarea name="message" placeholder="Tell me about your business and goals" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+    
+    <p id="form-status" style="display:none;">
+      Thank you — I’ll be in touch shortly.
+    </p>
   </section>
 
 </main>
@@ -63,6 +75,23 @@
 <footer>
   &copy; Royal Fortress Meadow
 </footer>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_bumfpq8",
+      "template_tq4pesi",
+      this
+    ).then(function() {
+      document.getElementById("contact-form").style.display = "none";
+      document.getElementById("form-status").style.display = "block";
+    }, function(error) {
+      alert("Something went wrong. Please try again.");
+    });
+  });
+</script>
 
 </body>
 </html>
