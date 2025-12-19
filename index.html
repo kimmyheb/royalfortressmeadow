@@ -56,7 +56,10 @@
 
   <section id="contact">
     <h2>Start the Conversation</h2>
-    <p>Interested in working together? Share a few details and I’ll follow up.</p>
+    <p id="contact-intro">
+      Interested in working together? Share a few details and I’ll follow up.
+    </p>
+    
 
     <form id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -84,11 +87,13 @@
       "service_bumfpq8",
       "template_tq4pesi",
       this
-    ).then(function() {
+      ).then(function() {
       document.getElementById("contact-form").style.display = "none";
+      document.getElementById("contact-intro").style.display = "none";
       document.getElementById("form-status").style.display = "block";
     }, function(error) {
       alert("Something went wrong. Please try again.");
+      console.error(error);
     });
   });
 </script>

@@ -229,6 +229,30 @@ form {
   max-width: 480px;
 }
 
+
+/* =========================
+   FORM STATUS
+   #form-status {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: var(--accent);
+}
+
+========================= */
+
+
+#form-status {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 input,
 textarea {
   width: 100%;
