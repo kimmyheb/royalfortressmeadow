@@ -149,27 +149,23 @@ section h2 {
   text-align: center;
 }
 
-/* =========================
-   HOW IT WORKS – CLEAN FLOW
-========================= */
-.process {
-  max-width: 760px;
-  margin: 0 auto;
-}
 
-.process h2 {
-  text-align: center;
-  margin-bottom: 56px;
-}
-
+/* =========================================
+   HOTFIX: FIX "HOW IT WORKS" WRAPPING BUG
+   (forces list items NOT to be grid)
+========================================= */
 .process ol {
   list-style: none;
   padding: 0;
   margin: 0;
   counter-reset: step;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .process li {
+  display: block !important;         /* kills grid */
   position: relative;
   padding-left: 44px;
   margin-bottom: 28px;
@@ -179,22 +175,21 @@ section h2 {
   color: var(--text-muted);
 }
 
-/* number */
 .process li::before {
   counter-increment: step;
   content: counter(step);
   position: absolute;
   left: 0;
-  top: 0.15em;
+  top: 0.1em;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent);
 }
 
-/* bold title stays inline */
 .process li strong {
+  display: inline !important;        /* prevents block stacking */
   color: var(--text-dark);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 
